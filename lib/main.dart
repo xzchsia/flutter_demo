@@ -5,6 +5,7 @@ import 'package:flutter_demo/BottonNavigation/BottomAppBar.dart';
 import 'FrostedGlass.dart';
 import 'package:flutter_demo/TabBarWithState/TabBarDemo.dart';
 import 'SearchBarDemo.dart';
+import 'GridViewDemo.dart';
 
 
 void main() => runApp(MyApp());
@@ -103,6 +104,18 @@ class MyAppPage extends StatelessWidget {
                 );
               },
               child: Text('搜索工具框'),
+            ),
+            RaisedButton(
+              // 点击页面跳转
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GridViewDemo(),
+                  ),
+                );
+              },
+              child: Text('GridView'),
             ),
           ],
         ),

@@ -2,6 +2,9 @@
 
 Flutter Learning Demo
 
+Flutter Release Stable 1.0 
+Android Studio V3.2.1
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

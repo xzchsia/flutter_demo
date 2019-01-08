@@ -7,6 +7,9 @@ class FrostedGlass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('FrostedGlass'),
+      ),
       body: Stack(
         children: <Widget>[
           ConstrainedBox(
