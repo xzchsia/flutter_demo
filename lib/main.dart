@@ -6,6 +6,7 @@ import 'FrostedGlass.dart';
 import 'package:flutter_demo/TabBarWithState/TabBarDemo.dart';
 import 'SearchBarDemo.dart';
 import 'GridViewDemo.dart';
+import 'WrapDemp.dart';
 
 
 void main() => runApp(MyApp());
@@ -116,6 +117,18 @@ class MyAppPage extends StatelessWidget {
                 );
               },
               child: Text('GridView'),
+            ),
+            RaisedButton(
+              // 点击页面跳转
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WrapDemo(),
+                  ),
+                );
+              },
+              child: Text('Wrap流式布局'),
             ),
           ],
         ),
