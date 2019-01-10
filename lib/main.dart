@@ -7,6 +7,7 @@ import 'package:flutter_demo/TabBarWithState/TabBarDemo.dart';
 import 'SearchBarDemo.dart';
 import 'GridViewDemo.dart';
 import 'WrapDemp.dart';
+import 'RefreshIndicatorDemo.dart';
 
 
 void main() => runApp(MyApp());
@@ -129,6 +130,18 @@ class MyAppPage extends StatelessWidget {
                 );
               },
               child: Text('Wrap流式布局'),
+            ),
+            RaisedButton(
+              // 点击页面跳转
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RefreshIndicatorDemo(),
+                  ),
+                );
+              },
+              child: Text('RefreshIndicator上拉加载，下拉刷新'),
             ),
           ],
         ),
