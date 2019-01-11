@@ -52,9 +52,8 @@ class _RefreshIndicatorDemoState extends State<RefreshIndicatorDemo> {
   }
 
   Future<List<int>> mockHttpRequest(int from, int to) async {
-    return Future.delayed(Duration(seconds: 2), () {
-      return List.generate(to - from, (i) => i + from);
-    });
+    return Future.delayed(
+        Duration(seconds: 2), () => List.generate(to - from, (i) => i + from));
   }
 
   //下拉刷新的回调
@@ -62,7 +61,7 @@ class _RefreshIndicatorDemoState extends State<RefreshIndicatorDemo> {
     await Future.delayed(Duration(seconds: 3), () {
       items.clear();
       items = List.generate(20, (idx) => idx);
-      print('Refresh:'+items.length.toString());
+      print('Refresh:' + items.length.toString());
       return null;
     });
   }
