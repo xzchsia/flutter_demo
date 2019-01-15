@@ -8,7 +8,8 @@ import 'SearchBarDemo.dart';
 import 'GridViewDemo.dart';
 import 'WrapDemp.dart';
 import 'RefreshIndicatorDemo.dart';
-import 'LayoutTutorials.dart';
+import 'package:flutter_demo/FavoritePage/LayoutTutorials.dart';
+import 'colors_demo.dart';
 
 
 class MyAppPage extends StatelessWidget {
@@ -141,6 +142,18 @@ class MyAppPage extends StatelessWidget {
                 );
               },
               child: Text('LayoutTutorialsUI'),
+            ),
+            RaisedButton(
+              // 点击页面跳转
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ColorsDemo(),
+                  ),
+                );
+              },
+              child: Text('颜色ColorsDemo'),
             ),
           ],
         ),

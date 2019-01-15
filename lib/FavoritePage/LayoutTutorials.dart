@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/FavoritePage/FavoriteWidget.dart';
 
 class LayoutTutorials extends StatelessWidget {
   // 构建上图下文字的组合
@@ -54,11 +55,12 @@ class LayoutTutorials extends StatelessWidget {
               ],
             ),
           ),
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
+          FavoriteWidget(),
+//          Icon(
+//            Icons.star,
+//            color: Colors.red[500],
+//          ),
+//          Text('41'),
         ],
       ),
     );
