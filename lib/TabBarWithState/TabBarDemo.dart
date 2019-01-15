@@ -36,9 +36,9 @@ class _TabBarDemoState extends State<TabBarDemo>
       ),
       body: TabBarView(
         children: <Widget>[
-          KeepAliveDemo(),
-          KeepAliveDemo(),
-          KeepAliveDemo(),
+          KeepAliveDemo(title:'111'),
+          KeepAliveDemo(title:'222'),
+          KeepAliveDemo(title:'333'),
         ],
         controller: _tabController,
       ),
