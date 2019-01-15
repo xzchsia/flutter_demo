@@ -8,13 +8,13 @@ import 'SearchBarDemo.dart';
 import 'GridViewDemo.dart';
 import 'WrapDemp.dart';
 import 'RefreshIndicatorDemo.dart';
+import 'LayoutTutorials.dart';
 
 
 class MyAppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('11111111111111111111');
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Demo'),
@@ -130,7 +130,18 @@ class MyAppPage extends StatelessWidget {
               },
               child: Text('RefreshIndicator上拉加载，下拉刷新'),
             ),
-
+            RaisedButton(
+              // 点击页面跳转
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LayoutTutorials(),
+                  ),
+                );
+              },
+              child: Text('LayoutTutorialsUI'),
+            ),
           ],
         ),
       ),
