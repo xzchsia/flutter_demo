@@ -25,6 +25,15 @@ class _BottomNavigationState extends State<BottomNavigationWidget> {
     super.initState();
   }
 
+  /// 切换item的颜色，选中用primaryColor，其他都是grey 
+  Color _buildStyle(int index) {
+    if(index == _currentIndex) {
+      return _bottomNavigationColor;
+    } else {
+      return Colors.grey;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,41 +45,41 @@ class _BottomNavigationState extends State<BottomNavigationWidget> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: _bottomNavigationColor,
+              color: _buildStyle(0),
             ),
             title: Text(
               'Home',
-              style: TextStyle(color: _bottomNavigationColor),
+              style: TextStyle(color: _buildStyle(0)),
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.email,
-              color: _bottomNavigationColor,
+              color: _buildStyle(1),
             ),
             title: Text(
               'Email',
-              style: TextStyle(color: _bottomNavigationColor),
+              style: TextStyle(color: _buildStyle(1)),
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.pages,
-              color: _bottomNavigationColor,
+              color: _buildStyle(2),
             ),
             title: Text(
               'Pages',
-              style: TextStyle(color: _bottomNavigationColor),
+              style: TextStyle(color: _buildStyle(2)),
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.airplay,
-              color: _bottomNavigationColor,
+              color: _buildStyle(3),
             ),
             title: Text(
               'AirPlay',
-              style: TextStyle(color: _bottomNavigationColor),
+              style: TextStyle(color: _buildStyle(3)),
             ),
           ),
         ],
