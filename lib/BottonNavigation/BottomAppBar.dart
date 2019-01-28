@@ -20,6 +20,15 @@ class _BottomNavigationState extends State<BottomAppBarWidget> {
     super.initState();
   }
 
+    /// 切换item的颜色，选中用primaryColor，其他都是grey 
+  Color _buildColorStyle(int index) {
+    if(index == _currentIndex) {
+      return Colors.white;
+    } else {
+      return Colors.grey;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +62,7 @@ class _BottomNavigationState extends State<BottomAppBarWidget> {
                   _currentIndex = 0;
                 });
               },
-              color: Colors.white,
+              color: _buildColorStyle(0),
             ),
             IconButton(
               icon: Icon(Icons.camera_roll),
@@ -63,7 +72,7 @@ class _BottomNavigationState extends State<BottomAppBarWidget> {
                   _currentIndex = 1;
                 });
               },
-              color: Colors.white,
+              color: _buildColorStyle(1),
             ),
           ],
         ),
