@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/BottonNavigation/home_screen.dart';
-import 'package:flutter_demo/BottonNavigation/email_screen.dart';
-import 'package:flutter_demo/BottonNavigation/pages_screen.dart';
-import 'package:flutter_demo/BottonNavigation/airplay_screen.dart';
 
 class BottomNavigationWidget extends StatefulWidget {
   @override
@@ -20,10 +17,11 @@ class _BottomNavigationState extends State<BottomNavigationWidget> {
   @override
   void initState() {
     listPages
-      ..add(HomeScreen())
-      ..add(EmailScreen())
-      ..add(PagesScreen())
-      ..add(AirPlayScreen());
+      ..add(HomeScreen("HomeScreen"))
+      ..add(HomeScreen("EmailScreen"))
+      ..add(HomeScreen("PagesScreen"))
+      ..add(HomeScreen("AirPlayScreen"));
+
     super.initState();
   }
 
@@ -32,6 +30,8 @@ class _BottomNavigationState extends State<BottomNavigationWidget> {
     return Scaffold(
       body: listPages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        fixedColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
